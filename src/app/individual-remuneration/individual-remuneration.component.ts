@@ -44,7 +44,7 @@ export class IndividualRemunerationComponent implements OnInit {
 
   public submit(): void {
     this.valueChange.emit(this.mergedSelectedRemunerations);
-    console.log('data', this.mergedSelectedRemunerations);
+    this.remunerationsService.sendData(this.mergedSelectedRemunerations);
   }
 
   public cancel(): void {}
