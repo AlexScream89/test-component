@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
 
 export const appRoutes: Routes = [
-  { path: '**', loadChildren: './remuneration/remuneration.module#RemunerationModule' }
+  { path: '**', loadChildren: './remunerations/remunerations.module#RemunerationsModule' }
 ];
