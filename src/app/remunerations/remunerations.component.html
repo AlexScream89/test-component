@@ -14,8 +14,16 @@
     ></app-remuneration-list>
   </div>
   <div class="buttons">
-    <button (click)="cancel()">Annuler</button>
     <button
+      mat-flat-button
+      color="accent"
+      (click)="cancel()"
+    >
+      Annuler
+    </button>
+    <button
+      mat-flat-button
+      color="{{!isDisabled() ? 'accent' : null}}"
       (click)="validate()"
       [disabled]="isDisabled()"
     >

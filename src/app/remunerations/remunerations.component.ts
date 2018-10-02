@@ -44,6 +44,7 @@ export class RemunerationsComponent implements OnInit {
 
   public submit(): void {
     this.valueChange.emit(this.mergedSelectedRemunerations);
+    console.log('data', this.mergedSelectedRemunerations);
   }
 
   public cancel(): void {}
@@ -65,8 +66,7 @@ export class RemunerationsComponent implements OnInit {
   public mergePanels(): void {
     this.panelsData = [...this.remunerationLeft, ...this.remunerationRight];
     this.getSelectedData();
-    this.validate();
-    console.log('panels data', this.panelsData);
+    this.isDisabled();
   }
 
   private getSelectedData(): void {

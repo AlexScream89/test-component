@@ -1,16 +1,31 @@
 $mobile-device-width: 767px;
 
 .remunerations-main {
-  max-width: 600px;
+  max-width: 680px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 10px 30px 10px;
   .remunerations {
     display: flex;
+    background-color: #fff;
+    border-radius: 10px;
     @media (max-width: $mobile-device-width) {
       flex-direction: column;
     }
   }
 
   .buttons {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-top: 20px;
+    @media (max-width: $mobile-device-width) {
+      justify-content: flex-start;
+    }
+    button:last-child {
+      margin-left: 15px;
+      @media(max-width: 400px) {
+        margin-left: 5px;
+      }
+    }
   }
 }

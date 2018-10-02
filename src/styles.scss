@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+.mat-fab.mat-accent,
+.mat-flat-button.mat-accent,
+.mat-mini-fab.mat-accent,
+.mat-raised-button.mat-accent {
+  color: #fff;
+}
+.mat-fab,
+.mat-flat-button,
+.mat-mini-fab,
+.mat-raised-button {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #999;
+}
+
+.mat-button,
+.mat-flat-button,
+.mat-icon-button,
+.mat-stroked-button {
+  min-width: 160px !important;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 8px !important;
+  @media(max-width: 400px) {
+    font-size: 14px;
+    min-width: 140px !important;
+  }
+}
+
+.mat-flat-button[disabled][disabled] {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #999;
+}
+

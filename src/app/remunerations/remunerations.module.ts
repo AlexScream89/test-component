@@ -7,11 +7,13 @@ import { RemunerationComponent } from './shared/remuneration/remuneration.compon
 import { RemunerationListComponent } from './shared/remuneration-list/remuneration-list.component';
 import { RemunerationsService } from './shared/providers/remunerations.service';
 import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(remunerationRoutes)
+    RouterModule.forChild(remunerationRoutes),
+    MatButtonModule
   ],
   declarations: [
     RemunerationsComponent,

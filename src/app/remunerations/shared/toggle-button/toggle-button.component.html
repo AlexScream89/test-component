@@ -1,1 +1,7 @@
-<button (click)="changeStatus()">{{label}}</button>
+<button
+  mat-flat-button
+  color="{{toggled ? 'accent' : null}}"
+  (click)="changeStatus()"
+>
+  {{label}}
+</button>

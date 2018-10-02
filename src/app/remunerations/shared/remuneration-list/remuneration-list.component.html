@@ -1,7 +1,7 @@
 <div class="remuneration-list">
-  <div>{{title}}</div>
-  <div>{{label}}</div>
-  <div *ngFor="let remuneration of remunerationSelectionStatusList; let i = index">
+  <div class="title">{{title}}</div>
+  <div class="label">{{label}}</div>
+  <div *ngFor="let remuneration of remunerationSelectionStatusList; let i = index" class="remuneration-item">
     <app-remuneration
       [remunerationSelectionStatus]="remuneration"
       (valueChange)="onValueChanged($event, i)"

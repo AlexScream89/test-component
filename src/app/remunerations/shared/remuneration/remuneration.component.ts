@@ -18,7 +18,7 @@ export class RemunerationComponent {
   }
 
   public onChangeAmount(value: string): void {
-    this.remunerationSelectionStatus.remuneration.amount.min = +value;
+    this.remunerationSelectionStatus.remuneration.amount.min = ((+value < 0) ? 0 : +value );
     this.valueChange.emit(this.remunerationSelectionStatus);
   }
 

@@ -12,7 +12,7 @@ export const mockData = [
     }
   },
   {
-    'contractType': 'FREELANCE',
+    'contractType': 'Freelance',
     'amount': {
       'min': 500.0
     }
