@@ -1,7 +1,7 @@
-import { RemunerationsComponent } from './remunerations.component';
+import { IndividualRemunerationComponent } from './individual-remuneration.component';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { remunerationRoutes } from './remunerations.route';
+import { remunerationRoutes } from './individual-remuneration.route';
 import { ToggleButtonComponent } from './shared/toggle-button/toggle-button.component';
 import { RemunerationComponent } from './shared/remuneration/remuneration.component';
 import { RemunerationListComponent } from './shared/remuneration-list/remuneration-list.component';
@@ -16,7 +16,7 @@ import { MatButtonModule } from '@angular/material';
     MatButtonModule
   ],
   declarations: [
-    RemunerationsComponent,
+    IndividualRemunerationComponent,
     ToggleButtonComponent,
     RemunerationComponent,
     RemunerationListComponent
@@ -24,4 +24,4 @@ import { MatButtonModule } from '@angular/material';
   providers: [RemunerationsService]
 })
 
-export class RemunerationsModule {}
+export class IndividualRemunerationModule {}

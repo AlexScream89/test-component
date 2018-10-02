@@ -27,4 +27,8 @@ export class RemunerationComponent {
     this.valueChange.emit(this.remunerationSelectionStatus);
   }
 
+  public getValue(): number {
+    return +this.remunerationSelectionStatus.remuneration.amount.min;
+  }
+
 }

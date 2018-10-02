@@ -11,10 +11,10 @@ interface Panel {
 
 @Component({
   selector: 'app-individual-remuneration',
-  templateUrl: './remunerations.component.html',
-  styleUrls: ['./remunerations.component.scss']
+  templateUrl: './individual-remuneration.component.html',
+  styleUrls: ['./individual-remuneration.component.scss']
 })
-export class RemunerationsComponent implements OnInit {
+export class IndividualRemunerationComponent implements OnInit {
 
   @Input() remunerations: Remuneration[];
   @Output() valueChange: EventEmitter<Remuneration[]> = new EventEmitter();
