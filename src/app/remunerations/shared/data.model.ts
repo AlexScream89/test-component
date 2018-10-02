@@ -1,5 +1,5 @@
-enum ContractType {
-  CDD, CDI, Stage, Apprentissage, Freelance
+export enum ContractType {
+  'CDD', 'CDI', 'Stage', 'Apprentissage', 'Freelance'
 }
 
 export class Amount {

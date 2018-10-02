@@ -1,3 +1,10 @@
-<p>
-  remuneration-list works!
-</p>
+<div class="remuneration-list">
+  <div>{{title}}</div>
+  <div>{{label}}</div>
+  <div *ngFor="let remuneration of remunerationSelectionStatusList; let i = index">
+    <app-remuneration
+      [remunerationSelectionStatus]="remuneration"
+      (valueChange)="onValueChanged($event, i)"
+    ></app-remuneration>
+  </div>
+</div>

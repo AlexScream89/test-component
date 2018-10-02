@@ -1,10 +1,25 @@
-<div>
-  <app-remuneration-list
-    [title]="leftPanel.title"
-    [label]="leftPanel.label"
-  ></app-remuneration-list>
-  <app-remuneration-list
-    [title]="rightPanel.title"
-    [label]="rightPanel.label"
-  ></app-remuneration-list>
+<div class="remunerations-main">
+  <div class="remunerations">
+    <app-remuneration-list
+      [title]="leftPanel.title"
+      [label]="leftPanel.label"
+      [remunerationSelectionStatusList]="remunerationLeft"
+      (valueChange)="leftChanged($event)"
+    ></app-remuneration-list>
+    <app-remuneration-list
+      [title]="rightPanel.title"
+      [label]="rightPanel.label"
+      [remunerationSelectionStatusList]="remunerationRight"
+      (valueChange)="rightChanged($event)"
+    ></app-remuneration-list>
+  </div>
+  <div class="buttons">
+    <button (click)="cancel()">Annuler</button>
+    <button
+      (click)="validate()"
+      [disabled]="isDisabled()"
+    >
+      Valider
+    </button>
+  </div>
 </div>

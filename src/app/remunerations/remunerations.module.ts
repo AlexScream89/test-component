@@ -6,9 +6,11 @@ import { ToggleButtonComponent } from './shared/toggle-button/toggle-button.comp
 import { RemunerationComponent } from './shared/remuneration/remuneration.component';
 import { RemunerationListComponent } from './shared/remuneration-list/remuneration-list.component';
 import { RemunerationsService } from './shared/providers/remunerations.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
+    CommonModule,
     RouterModule.forChild(remunerationRoutes)
   ],
   declarations: [

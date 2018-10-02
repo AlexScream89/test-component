@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { RemunerationSelectionStatus } from '../data.model';
 
 @Component({
@@ -6,17 +6,25 @@ import { RemunerationSelectionStatus } from '../data.model';
   templateUrl: './remuneration.component.html',
   styleUrls: ['./remuneration.component.scss']
 })
-export class RemunerationComponent implements OnInit {
+export class RemunerationComponent {
 
   @Input() remunerationSelectionStatus: RemunerationSelectionStatus;
-  @Output() valueChange: RemunerationSelectionStatus;
+  @Output() valueChange: EventEmitter<RemunerationSelectionStatus> = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {}
+  constructor() {}
 
   public isDisabled(): boolean {
-    return false;
+    return (this.remunerationSelectionStatus.selected === false);
+  }
+
+  public onChangeAmount(value: string): void {
+    this.remunerationSelectionStatus.remuneration.amount.min = +value;
+    this.valueChange.emit(this.remunerationSelectionStatus);
+  }
+
+  public onValueChanged($event: boolean): void {
+    this.remunerationSelectionStatus.selected = $event;
+    this.valueChange.emit(this.remunerationSelectionStatus);
   }
 
 }

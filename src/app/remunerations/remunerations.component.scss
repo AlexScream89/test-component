@@ -1,0 +1,16 @@
+$mobile-device-width: 767px;
+
+.remunerations-main {
+  max-width: 600px;
+  .remunerations {
+    display: flex;
+    @media (max-width: $mobile-device-width) {
+      flex-direction: column;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

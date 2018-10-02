@@ -1,2 +1,12 @@
-<app-toggle-button></app-toggle-button>
-<input type="number" min="0" [disabled]="isDisabled()">
+<app-toggle-button
+  [label]="remunerationSelectionStatus.remuneration.contractType"
+  [toggled]="remunerationSelectionStatus.selected"
+  (valueChange)="onValueChanged($event)"
+></app-toggle-button>
+<input
+  type="number"
+  min="0"
+  (change)="onChangeAmount($event.target.value)"
+  [disabled]="isDisabled()"
+  [value]="remunerationSelectionStatus.remuneration.amount.min"
+>
